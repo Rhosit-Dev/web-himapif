@@ -359,12 +359,172 @@ section .sect-program {
     padding: 50px 240px;
 }
 
+.saran {
+    color: var(--primer);
+    background-color: var(--second);
+    padding-bottom: 200px;
+    height: 50px;
+    margin: 0 300px;
+}
+
+.sect-contact {
+    background-color: var(--section2);
+    background-image: url(pict/bg-contact.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 50px 240px;
+    /* text-align: center; */
+    box-shadow: 0 -15px 50px rgba(0, 0, 0, 0.4);
+}
+
+.sect-contact h3 {
+    padding-bottom: 15px;
+}
+
+.sect-contact .div-contact {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sect-contact .contact {
+    color: var(--second);
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sect-contact .logo-contact img {
+    width: 100px;
+    height: 100px;
+}
+
+.sect-contact .logo-contact p {
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.sect-contact .since h1 {
+    font-size: 48px;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--second);
+    tex
+}
+
+/* .sect-contact .since h2 {
+    display: inline-block;
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--accent);
+    animation: verticalSpin 1s ease-in-out;
+}
+
+@keyframes verticalSpin {
+    0% {
+        transform: translateY(50px) rotateX(90deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) rotateX(0deg);
+        opacity: 1;
+    }
+} */
+
+.sect-contact .tautan-kontak a {
+    position: relative;
+    overflow: hidden;
+    padding: 7px 0;
+    color: var(--accent);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 500ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.sect-contact .tautan-kontak a::before {
+    content: '→';
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+}
+
+.sect-contact .tautan-kontak a:hover {
+    padding-left: 20px;
+    color: var(--accent);
+}
+
+.sect-contact .tautan-kontak a:hover::before {
+    left: 0;
+    opacity: 1;
+}
+
+.sect-contact .email h3 {
+    padding-top: 30px;
+}
+
+.sect-contact .email a {
+    color: var(--second);
+}
+
+.sect-contact .telepon a {
+    color: var(--second);
+}
+
+.sect-contact .telepon a:visited {
+    color: var(--second);
+}
+
+.sect-contact .akun-resmi {
+    padding-top: 30px;
+}
+
+.sect-contact i {
+    color: var(--second);
+    /* margin: 2px; */
+    display: inline-block;
+    font-size: 18px;
+    padding: 0 5px;
+    transition: 300ms ease-in-out;
+}
+
+.sect-contact i:hover {
+    color: var(--primer);
+    /* border: 2px solid var(--accent); */
+    background-color: var(--second);
+    border-radius: 4px;
+    /* padding: 0 5px; */
+    /* transform: scale(1.2); */
+}
+
+.sect-contact a:visited {
+    color: var(--primer);
+}
+
+.sect-contact .tautan a:visited {
+    color: var(--second);
+}
+
 footer {
     background: var(--second);
+    background-image: url(pict/bg\ footer.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
     text-align: center;
     font-size: 14px;
-    padding: 30px;
+    padding: 25px;
     box-shadow: 0 -15px 50px rgba(0, 0, 0, 0.4);
 }
 
@@ -386,7 +546,7 @@ footer a:visited {
 }
 
 footer p {
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 
