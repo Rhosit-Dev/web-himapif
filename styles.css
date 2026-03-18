@@ -1,0 +1,764 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    font-family: "Poppins", "Montserrat", sans-serif;
+}
+
+:root {
+    --primer: #FFFFFF;
+    --second: #1A2B4C;
+    --accent: #C6A15B;
+    --section1: #1a2b4c1e;
+    --section2: #c6a15b1e;
+}
+
+body {
+    margin: 0;
+    color: var(--second);
+    background-color: var(--primer);
+    height: 100%;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 150px;
+    background: rgb(26, 43, 76, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    margin: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--second);
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    color: var(--accent);
+    /* background: linear-gradient(270deg, #C6A15B 10%, #1A2B4C 90%);
+  background-clip: text;
+  color: transparent; */
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--second);
+    font-size: 16px;
+    transition: 300ms ease-in-out;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+}
+
+nav ul i {
+    display: none;
+    color: var(--second);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.li-right {
+    margin-right: 20px;
+}
+
+.contact-btn {
+    margin: 0 0 0 20px;
+    padding: 10px 20px;
+    background-color: var(--accent);
+    color: var(--second);
+    font-weight: 600;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: #1A2B4C 0px 4px 6px -1px, #1A2B4C 0px 2px 4px -1px;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+
+.contact-btn:hover {
+    background-color: var(--second);
+    color: var(--accent);
+    transform: scale(1.1);
+    box-shadow: #C6A15B 0px 4px 6px -1px, #C6A15B 0px 2px 4px -1px;
+}
+
+/* new */
+
+.sect-welcome {
+    background-color: var(--primer);
+    width: 100%;
+    margin: 0 auto;
+    padding: 130px 240px 50px;
+}
+
+.sect-welcome .welcome {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--second);
+}
+
+.sect-welcome .main {
+    font-size: 80px;
+    font-weight: 700;
+    color: var(--accent);
+    transition: 500ms ease-in-out;
+}
+
+.sect-welcome .main:hover {
+    color: var(--accent);
+    background: linear-gradient(270deg, #C6A15B 10%, #1A2B4C 90%);
+    background-clip: text;
+    color: transparent;
+    transform: translateX(30px);
+}
+
+.sect-welcome .logo-3d {
+    width: 500px;
+    height: 500px;
+    margin-top: 20px;
+    position: absolute;
+    right: 200px;
+    top: 220px;
+    transition: 300ms ease-in-out;
+}
+
+.sect-welcome .logo-3d:hover {
+    transform: scale(1.1);
+}
+
+.sect-welcome p {
+    font-size: 18px;
+    text-align: justify;
+    margin-right: 500px;
+    color: var(--second);
+}
+
+.sect-welcome .about-video {
+        font-size: 28px;
+        margin: 20px 0;
+        font-weight: 700;
+        text-align: center;
+    }
+
+.sect-welcome .video-wrapper {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 33.7%;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transition: all 300ms ease-in-out;
+}
+
+.sect-welcome .video-wrapper:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.sect-about {
+    background-color: var(--section1);
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 240px;
+}
+
+.sect-about .about {
+    color: var(--second);
+    font-size: 36px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.sect-about p {
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.sect-program {
+    background-color: var(--primer);
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 240px;
+}
+
+.sect-program .program {
+    color: var(--second);
+    font-size: 36px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.sect-program p {
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.sect-division {
+    background-color: var(--section1);
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 240px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.sect-division .division {
+    color: var(--second);
+    font-size: 36px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    /* width: 100%; */
+}
+
+.sect-division .caption {
+    color: var(--second);
+    margin-bottom: 30px;
+}
+
+.sect-division .div-1, .sect-division .div-2, .sect-division .div-3, .sect-division .div-4, .sect-division .div-5, .sect-division .div-6, .sect-division .div-7 {
+    width: 290px;
+    background-color: var(--second);
+    border: 1px solid var(--primer);
+    border-radius: 15px;
+    color: var(--primer);
+    font-size: 16px;
+    margin: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: all 300ms ease-in-out;
+}
+
+.sect-division .div-1:hover, .sect-division .div-2:hover, .sect-division .div-3:hover, .sect-division .div-4:hover, .sect-division .div-5:hover, .sect-division .div-6:hover, .sect-division .div-7:hover {
+    background-color: var(--primer);
+    border: 3px solid var(--second);
+    color: var(--second);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.sect-division .posdm, .kominfo, .advo, .penalaran, .minbat, .invensu, .kerohanian {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.sect-division p {
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.sect-map {
+    background-color: var(--primer);
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 240px;
+}
+
+.sect-map .alamat {
+    color: var(--second);
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.sect-map .map iframe {
+    width: 500px;
+    height: 350px;
+    display: flex;
+    justify-content: flex-start;
+    border: 5px solid var(--second);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+/* width="600" height="450" style="border:0; */
+
+/* new end */
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 130px 240px 50px;
+}
+
+.cont-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    /* gap: 20px; */
+}
+
+.container .welcome {
+    font-size: 48px;
+}
+
+
+.container p {
+    font-size: 18px;
+    margin-right: 500px;
+}
+
+
+section .sect-program {
+    background-color: var(--accent);
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 240px;
+}
+
+footer {
+    background: var(--second);
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    padding: 30px;
+    box-shadow: 0 -15px 50px rgba(0, 0, 0, 0.4);
+}
+
+footer i {
+    color: var(--primer);
+    margin: 10px;
+    display: inline-block;
+    font-size: 24px;
+    transition: 300ms ease-in-out;
+}
+
+footer i:hover {
+    color: var(--accent);
+    transform: scale(1.2);
+}
+
+footer a:visited {
+    color: var(--primer);
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+
+/* media queries */
+/* Desktop */
+@media (min-width: 1441px) {
+    header {
+        padding: 10px 150px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .contact-btn {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+
+    .sect-welcome {
+        padding: 130px 240px 50px;
+    }
+
+    .sect-welcome .welcome {
+        font-size: 36px;
+    }
+
+    .sect-welcome .main {
+        font-size: 80px;
+    }
+
+    .sect-welcome .logo-3d {
+        width: 500px;
+        height: 500px;
+        right: 200px;
+        top: 220px;
+    }
+
+    .sect-welcome p {
+        margin-right: 500px;
+    }
+
+    .sect-welcome .about-video {
+        font-size: 28px;
+        margin: 20px 0;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .sect-about {
+        padding: 50px 240px;
+    }
+
+    .sect-about .about {
+        font-size: 36px;
+    }
+
+    .sect-program {
+        padding: 50px 240px;
+    }
+
+    .sect-program .program {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .sect-division {
+        padding: 50px 240px;
+    }
+
+    .sect-division .division {
+        font-size: 36px;
+    }
+
+    .sect-division .div-1, .sect-division .div-2, .sect-division .div-3, .sect-division .div-4, .sect-division .div-5, .sect-division .div-6, .sect-division .div-7 {
+        width: 290px;
+    }
+}
+
+/* Laptops */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    header {
+        padding: 10px 100px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .contact-btn {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    .sect-welcome {
+        padding: 120px 100px 30px;
+    }
+
+    .sect-welcome .welcome {
+        font-size: 32px;
+    }
+
+    .sect-welcome .main {
+        font-size: 70px;
+    }
+
+    .sect-welcome .logo-3d {
+        width: 450px;
+        height: 450px;
+        right: -20px;
+        top: 200px;
+    }
+
+    .sect-welcome p {
+        margin-right: 400px;
+    }
+
+    .sect-welcome .about-video {
+        font-size: 32px;
+        margin: 20px 0;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .sect-about {
+        padding: 30px 100px;
+    }
+
+    .sect-about .about {
+        font-size: 32px;
+    }
+
+    .sect-program {
+        padding: 30px 100px;
+    }
+
+    .sect-program .program {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .sect-division {
+        padding: 30px 100px;
+    }
+
+    .sect-division .division {
+        font-size: 32px;
+    }
+
+    .sect-division .div-1, .sect-division .div-2, .sect-division .div-3, .sect-division .div-4, .sect-division .div-5, .sect-division .div-6, .sect-division .div-7 {
+        width: 350px;
+    }
+    
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        padding: 10px 50px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav ul li a {
+        display: none;
+    }
+
+    nav ul i {
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 30px;
+        transition: all 300ms ease-in-out;
+    }
+
+    nav ul i:hover {
+        color: var(--accent);
+    }
+
+    .contact-btn {
+        display: none;
+    }
+
+    .sect-welcome {
+        padding: 100px 50px 30px;
+    }
+
+    .sect-welcome .welcome {
+        font-size: 28px;
+    }
+
+    .sect-welcome .main {
+        font-size: 60px;
+    }
+
+    .sect-welcome .logo-3d {
+        width: 400px;
+        height: 400px;
+        right: -30px;
+        top: 150px;
+    }
+
+    .sect-welcome .main-description,
+    .sect-welcome .main-description-2 {
+        margin-right: 350px;
+    }
+
+    .sect-welcome p {
+        margin-right: 0;
+    }
+
+    .sect-welcome .about-video {
+        font-size: 28px;
+        margin: 20px 0;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .sect-about {
+        padding: 30px 50px;
+    }
+
+    .sect-about .about {
+        font-size: 28px;
+    }
+
+    .sect-program {
+        padding: 30px 50px;
+    }
+
+    .sect-program .program {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .sect-division {
+        padding: 30px 50px;
+    }
+
+    .sect-division .division {
+        font-size: 28px;
+    }
+
+    .sect-division .div-1, .sect-division .div-2, .sect-division .div-3, .sect-division .div-4, .sect-division .div-5, .sect-division .div-6, .sect-division .div-7 {
+        width: 400px;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    nav ul li a {
+        display: none;
+    }
+
+    nav ul i {
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 300ms ease-in-out;
+        padding-bottom: 30px;
+    }
+
+    nav ul i:hover {
+        color: var(--accent);
+    }
+
+    .contact-btn {
+        display: none;
+    }
+
+    .sect-welcome {
+        padding: 120px 20px 30px;
+    }
+
+    .sect-welcome .welcome {
+        font-size: 24px;
+    }
+
+    .sect-welcome .main {
+        font-size: 50px;
+    }
+
+    .sect-welcome .logo-3d {
+        width: 300px;
+        height: 300px;
+        right: -40px;
+        top: 100px;
+    }
+
+    .sect-welcome p {
+        margin-right: 0;
+    }
+
+    .sect-welcome .main-description {
+        margin-right: 300px;
+    }
+
+    .sect-welcome .about-video {
+        font-size: 24px;
+        margin: 20px 0;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .sect-about {
+        padding: 20px;
+    }
+
+    .sect-about .about {
+        font-size: 24px;
+    }
+
+    .sect-program {
+        padding: 20px;
+    }
+
+    .sect-program .program {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .sect-division {
+        padding: 20px;
+    }
+
+    .sect-division .division {
+        font-size: 24px;
+        text-align: center;
+    }
+    .sect-division .div-1, .sect-division .div-2, .sect-division .div-3, .sect-division .div-4, .sect-division .div-5, .sect-division .div-6, .sect-division .div-7 {
+        width: 100%;
+    }
+
+    .sect-map {
+        padding: 20px;
+    }
+
+    .sect-map .alamat {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .sect-map .map iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+}
