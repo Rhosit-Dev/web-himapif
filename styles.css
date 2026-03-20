@@ -6,15 +6,14 @@ html {
     text-decoration: none;
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
-    font-family: "Poppins", "Montserrat", sans-serif;
+    font-family: "Space Grotesk", "Poppins", "Montserrat", sans-serif;
 }
 
 :root {
     --primer: #FFFFFF;
     --second: #1A2B4C;
     --accent: #C6A15B;
-    --section1: #1a2b4c1e;
-    --section2: #c6a15b1e;
+    --text_transparent: #ffffff79;
 }
 
 body {
@@ -61,6 +60,7 @@ img {
   background-clip: text;
   color: transparent; */
 }
+
 
 nav ul li {
     display: inline-block;
@@ -132,6 +132,8 @@ nav ul i {
     font-weight: 700;
     color: var(--accent);
     transition: 500ms ease-in-out;
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 .sect-welcome .main:hover {
@@ -141,6 +143,36 @@ nav ul i {
     color: transparent;
     transform: translateX(30px);
 }
+
+/* .tracking-in-expand {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
 
 .sect-welcome .logo-3d {
     width: 500px;
@@ -327,31 +359,6 @@ nav ul i {
 
 /* new end */
 
-.container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 130px 240px 50px;
-}
-
-.cont-welcome {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0;
-    /* gap: 20px; */
-}
-
-.container .welcome {
-    font-size: 48px;
-}
-
-
-.container p {
-    font-size: 18px;
-    margin-right: 500px;
-}
-
-
 section .sect-program {
     background-color: var(--accent);
     width: 100%;
@@ -360,11 +367,40 @@ section .sect-program {
 }
 
 .saran {
+    background-image: url(pict/bg-header-info.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position:relative;
     color: var(--primer);
     background-color: var(--second);
-    padding-bottom: 200px;
-    height: 50px;
-    margin: 0 300px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    height: 160px;
+    border-radius: 10px;
+    margin: 0 200px -80px 200px;
+    transition: all 300ms ease-in-out;
+}
+
+.saran:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.saran h1 {
+    font-size: 36px;
+    margin-left: 90px;
+}
+
+.saran h4 {
+    font-weight: 400;
+    color: var(--text_transparent);
+    margin-left: 90px;
+}
+
+.div-contact {
+    margin-top: 80px;
 }
 
 .sect-contact {
@@ -381,8 +417,8 @@ section .sect-program {
     box-shadow: 0 -15px 50px rgba(0, 0, 0, 0.4);
 }
 
-.sect-contact h3 {
-    padding-bottom: 15px;
+.sect-contact .div-contact h3 {
+    margin-bottom: 8px;
 }
 
 .sect-contact .div-contact {
@@ -398,9 +434,18 @@ section .sect-program {
     text-align: center;
 }
 
+.sect-contact .logo-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 .sect-contact .logo-contact img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
 }
 
 .sect-contact .logo-contact p {
@@ -409,39 +454,21 @@ section .sect-program {
 }
 
 .sect-contact .since h1 {
-    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
     color: transparent;
     -webkit-text-stroke: 2px var(--second);
-    tex
 }
-
-/* .sect-contact .since h2 {
-    display: inline-block;
-    font-size: 48px;
-    font-weight: bold;
-    color: var(--accent);
-    animation: verticalSpin 1s ease-in-out;
-}
-
-@keyframes verticalSpin {
-    0% {
-        transform: translateY(50px) rotateX(90deg);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0) rotateX(0deg);
-        opacity: 1;
-    }
-} */
 
 .sect-contact .tautan-kontak a {
     position: relative;
     overflow: hidden;
     padding: 7px 0;
-    color: var(--accent);
+    color: var(--second);
     font-size: 16px;
     cursor: pointer;
-    transition: all 500ms ease;
+    transition: all 500ms ease-out;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -475,10 +502,20 @@ section .sect-program {
 
 .sect-contact .email a {
     color: var(--second);
+    transition: 300ms ease-in-out;
 }
 
-.sect-contact .telepon a {
+.sect-contact .email a:hover {
+    color: var(--accent);
+}
+
+.sect-contact .telepon div a {
     color: var(--second);
+    transition: 300ms ease-in-out;
+}
+
+.sect-contact .telepon div a:hover {
+    color: var(--accent);
 }
 
 .sect-contact .telepon a:visited {
@@ -505,14 +542,6 @@ section .sect-program {
     border-radius: 4px;
     /* padding: 0 5px; */
     /* transform: scale(1.2); */
-}
-
-.sect-contact a:visited {
-    color: var(--primer);
-}
-
-.sect-contact .tautan a:visited {
-    color: var(--second);
 }
 
 footer {
@@ -543,10 +572,6 @@ footer i:hover {
 
 footer a:visited {
     color: var(--primer);
-}
-
-footer p {
-    /* margin-top: 10px; */
 }
 
 
