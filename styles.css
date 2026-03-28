@@ -13,6 +13,8 @@ html {
     --primer: #FFFFFF;
     --second: #1A2B4C;
     --accent: #C6A15B;
+    --section1: #1a2b4c19;
+    --section2: #1a2b4c8a;
     --text_transparent: #ffffff79;
 }
 
@@ -116,7 +118,13 @@ nav ul i {
 
 .sect-welcome {
     background-color: var(--primer);
+    background-image: url(pict/bg-contact.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
+    height: 900px;
     margin: 0 auto;
     padding: 130px 240px 50px;
 }
@@ -133,7 +141,7 @@ nav ul i {
     color: var(--accent);
     transition: 500ms ease-in-out;
     -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 .sect-welcome .main:hover {
@@ -195,25 +203,192 @@ nav ul i {
     color: var(--second);
 }
 
-.sect-welcome .about-video {
-        font-size: 28px;
-        margin: 20px 0;
-        font-weight: 700;
-        text-align: center;
-    }
+.so-welcome a {
+    font-size: 14px;
+    color: var(--second);
+    transition: all 300ms ease-in-out;
+}
 
-.sect-welcome .video-wrapper {
-    position: relative;
-    width: 60%;
+.so-welcome a:hover {
+    color: var(--accent);
+}
+
+/* ===== STRUKTUR ORGANISASI ===== */
+.pimpinan-organisasi {
+    padding: 50px 20px;
+    text-align: center;
+    background: var(--primer);
+}
+
+.pimpinan-organisasi h1 {
+    font-size: 36px;
+    color: var(--second);
+    margin-bottom: 10px;
+}
+
+.pimpinan-organisasi>p {
+    color: var(--second);
+    margin-bottom: 50px;
+    font-size: 16px;
+}
+
+/* Container utama */
+.struktur-container {
+    max-width: 1200px;
     margin: 0 auto;
-    padding-bottom: 33.7%;
+}
+
+/* Card untuk setiap struktur */
+.struktur-card {
+    background: var(--section1);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.struktur-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--second);
+}
+
+/* Container foto */
+.foto-card {
+    width: 200px;
+    height: 250px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+}
+
+.foto-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+.struktur-card:hover .foto-card img {
+    transform: scale(1.05);
+}
+
+/* Teks dalam card */
+.struktur-card h3 {
+    font-size: 20px;
+    color: var(--second);
+    margin-bottom: 8px;
+}
+
+.struktur-card .nama {
+    font-size: 16px;
+    color: var(--second);
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.periode-badge {
+    display: inline-block;
+    background: var(--second);
+    color: white;
+    font-size: 12px;
+    padding: 5px 20px;
+    border-radius: 30px;
+}
+
+/* Layout: Pembina (tengah) */
+.struktur-container .pembina {
+    max-width: 350px;
+    margin: 0 auto 50px;
+}
+
+/* Inti Pimpinan (2 kolom) */
+.inti-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Jajaran PH (4 kolom) */
+.ph-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+}
+
+/* ===== JUDUL DIVISI ===== */
+.divisi-title {
+    margin: 60px 0 40px;
+}
+
+.divisi-title h2 {
+    font-size: 32px;
+    color: var(--second);
+    margin-bottom: 8px;
+}
+
+.divisi-title p {
+    color: var(--second);
+    font-size: 14px;
+}
+
+/* ===== 7 KEPALA DIVISI ===== */
+.kadiv-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 45px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.kadiv-container .struktur-card {
+    width: calc(25% - 25px);
+    /* 4 kolom */
+    min-width: 310px;
+    flex: 0 0 auto;
+    background: var(--section1);
+}
+
+.kadiv-container .struktur-card:nth-child(5) {
+    grid-column: 2 / 3;
+}
+
+.kadiv-container .struktur-card:nth-child(6) {
+    grid-column: 3 / 4;
+}
+
+.kadiv-container .struktur-card:nth-child(7) {
+    grid-column: 4 / 5;
+}
+
+.video-profil .about-video {
+    font-size: 28px;
+    margin: 20px 0;
+    font-weight: 700;
+    text-align: center;
+}
+
+.video-profil .video-wrapper {
+    position: relative;
+    width: 30%;
+    margin: 0 auto;
+    padding-bottom: 15.7%;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     transition: all 300ms ease-in-out;
 }
 
-.sect-welcome .video-wrapper:hover {
+.video-profil .video-wrapper:hover {
     transform: scale(1.05);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
@@ -246,6 +421,31 @@ nav ul i {
 .sect-about p {
     margin-top: 20px;
     text-align: justify;
+}
+
+.sect-about .struktur-container {
+    background-color: var(--second);
+    color: var(--primer);
+    border: 2px solid var(--second);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 700px;
+    height: 60px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sect-about .struktur-container:visited {
+    color: var(--primer);
+}
+
+.sect-about .struktur-container:hover {
+    transform: scale(1.05);
+}
+
+.sect-about .struktur-container a {
+    color: var(--primer);
 }
 
 .sect-program {
@@ -295,7 +495,13 @@ nav ul i {
     margin-bottom: 30px;
 }
 
-.sect-division .div-1, .sect-division .div-2, .sect-division .div-3, .sect-division .div-4, .sect-division .div-5, .sect-division .div-6, .sect-division .div-7 {
+.sect-division .div-1,
+.sect-division .div-2,
+.sect-division .div-3,
+.sect-division .div-4,
+.sect-division .div-5,
+.sect-division .div-6,
+.sect-division .div-7 {
     width: 290px;
     background-color: var(--second);
     border: 1px solid var(--primer);
@@ -309,7 +515,13 @@ nav ul i {
     transition: all 300ms ease-in-out;
 }
 
-.sect-division .div-1:hover, .sect-division .div-2:hover, .sect-division .div-3:hover, .sect-division .div-4:hover, .sect-division .div-5:hover, .sect-division .div-6:hover, .sect-division .div-7:hover {
+.sect-division .div-1:hover,
+.sect-division .div-2:hover,
+.sect-division .div-3:hover,
+.sect-division .div-4:hover,
+.sect-division .div-5:hover,
+.sect-division .div-6:hover,
+.sect-division .div-7:hover {
     background-color: var(--primer);
     border: 3px solid var(--second);
     color: var(--second);
@@ -317,7 +529,33 @@ nav ul i {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.sect-division .posdm, .kominfo, .advo, .penalaran, .minbat, .invensu, .kerohanian {
+/* .sect-division .posdm,
+.sect-division .kominfo,
+.sect-division .advo,
+.sect-division .penalaran,
+.sect-division .minbat,
+.sect-division .invensu,
+.sect-division .kerohanian {
+    color: var(--primer);
+} */
+
+/* .sect-division .posdm:hover,
+.sect-division .kominfo:hover,
+.sect-division .advo:hover,
+.sect-division .penalaran:hover,
+.sect-division .minbat:hover,
+.sect-division .invensu:hover,
+.sect-division .kerohanian:hover {
+    color: var(--second);
+} */
+
+.sect-division .posdm,
+.kominfo,
+.advo,
+.penalaran,
+.minbat,
+.invensu,
+.kerohanian {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -355,6 +593,7 @@ nav ul i {
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
+
 /* width="600" height="450" style="border:0; */
 
 /* new end */
@@ -371,7 +610,7 @@ section .sect-program {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
-    position:relative;
+    position: relative;
     color: var(--primer);
     background-color: var(--second);
     display: flex;
@@ -537,11 +776,8 @@ section .sect-program {
 
 .sect-contact i:hover {
     color: var(--primer);
-    /* border: 2px solid var(--accent); */
     background-color: var(--second);
     border-radius: 4px;
-    /* padding: 0 5px; */
-    /* transform: scale(1.2); */
 }
 
 footer {
@@ -574,6 +810,53 @@ footer a:visited {
     color: var(--primer);
 }
 
+/* ===== SCROLL REVEAL ANIMATION ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Untuk elemen yang ingin muncul dari kiri */
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.8s ease;
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Untuk elemen yang ingin muncul dari kanan */
+.reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Untuk kartu dengan efek berurutan */
+.card-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.card-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /* media queries */
 /* Desktop */
@@ -650,13 +933,19 @@ footer a:visited {
         font-size: 36px;
     }
 
-    .sect-division .div-1, .sect-division .div-2, .sect-division .div-3, .sect-division .div-4, .sect-division .div-5, .sect-division .div-6, .sect-division .div-7 {
+    .sect-division .div-1,
+    .sect-division .div-2,
+    .sect-division .div-3,
+    .sect-division .div-4,
+    .sect-division .div-5,
+    .sect-division .div-6,
+    .sect-division .div-7 {
         width: 290px;
     }
 }
 
 /* Laptops */
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (max-width: 1440px) {
     header {
         padding: 10px 100px;
     }
@@ -729,14 +1018,54 @@ footer a:visited {
         font-size: 32px;
     }
 
-    .sect-division .div-1, .sect-division .div-2, .sect-division .div-3, .sect-division .div-4, .sect-division .div-5, .sect-division .div-6, .sect-division .div-7 {
+    .sect-division .div-1,
+    .sect-division .div-2,
+    .sect-division .div-3,
+    .sect-division .div-4,
+    .sect-division .div-5,
+    .sect-division .div-6,
+    .sect-division .div-7 {
         width: 350px;
     }
-    
+
+}
+
+@media (max-width: 1250px) {
+    .saran {
+        height: 140px;
+        width: 100%;
+        border-radius: 0;
+        margin: 0 200px -70px 0;
+    }
+
+    .saran:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .sect-contact {
+        padding: 50px;
+    }
+
+    .sect-contact .div-contact h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .sect-contact .logo-contact {
+        font-size: 14px;
+    }
+
+    .sect-contact .since h1 {
+        font-size: 35px;
+    }
+
+    .sect-contact .tautan-kontak a {
+        font-size: 14px;
+    }
 }
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
     header {
         padding: 10px 50px;
     }
@@ -760,6 +1089,32 @@ footer a:visited {
 
     nav ul i:hover {
         color: var(--accent);
+    }
+
+    .ph-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .kadiv-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .kadiv-container .struktur-card {
+        width: calc(33.33% - 25px);
+        /* 3 kolom */
+    }
+
+    .inti-row {
+        gap: 25px;
+    }
+
+    .foto-card {
+        width: 180px;
+        height: 225px;
     }
 
     .contact-btn {
@@ -826,7 +1181,13 @@ footer a:visited {
         font-size: 28px;
     }
 
-    .sect-division .div-1, .sect-division .div-2, .sect-division .div-3, .sect-division .div-4, .sect-division .div-5, .sect-division .div-6, .sect-division .div-7 {
+    .sect-division .div-1,
+    .sect-division .div-2,
+    .sect-division .div-3,
+    .sect-division .div-4,
+    .sect-division .div-5,
+    .sect-division .div-6,
+    .sect-division .div-7 {
         width: 400px;
     }
 
@@ -860,6 +1221,42 @@ footer a:visited {
 
     nav ul i:hover {
         color: var(--accent);
+    }
+
+    .pimpinan-organisasi h1 {
+        font-size: 28px;
+    }
+
+    .inti-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 280px;
+    }
+
+    .ph-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .kadiv-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .kadiv-container .struktur-card {
+        width: calc(50% - 20px);
+        /* 2 kolom */
+    }
+
+    .foto-card {
+        width: 200px;
+        height: 250px;
+    }
+
+    .struktur-card {
+        padding: 20px;
     }
 
     .contact-btn {
@@ -925,7 +1322,14 @@ footer a:visited {
         font-size: 24px;
         text-align: center;
     }
-    .sect-division .div-1, .sect-division .div-2, .sect-division .div-3, .sect-division .div-4, .sect-division .div-5, .sect-division .div-6, .sect-division .div-7 {
+
+    .sect-division .div-1,
+    .sect-division .div-2,
+    .sect-division .div-3,
+    .sect-division .div-4,
+    .sect-division .div-5,
+    .sect-division .div-6,
+    .sect-division .div-7 {
         width: 100%;
     }
 
@@ -943,7 +1347,42 @@ footer a:visited {
         height: 300px;
     }
 
+    .saran {
+        height: 100px;
+        margin: 0 200px -50px 0;
+    }
+
+    .saran h1 {
+        font-size: 24px;
+    }
+
+    .saran h4 {
+        font-size: 12px;
+    }
+
+    .sect-contact {
+        width: 100%;
+        height: 400px;
+        padding: 10px;
+    }
+
+    .sect-contact .logo-contact {
+        font-size: 12px;
+    }
+
+    .sect-contact .div-contact {
+        font-size: 12px;
+    }
+
+    .sect-contact .div-contact h3 {
+        font-size: 14px;
+    }
+
     .footer {
         padding: 20px;
+    }
+
+    footer p {
+        font-size: 10px;
     }
 }
